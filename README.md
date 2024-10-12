@@ -1,2 +1,14 @@
-# jjug-ccc-2024-fall-hands-on-for-participants
-JJUG CCC 2024 Fall のハンズオンセッションの参加者向け資料です
+# 概要
+JJUG CCC 2024 Fall のハンズオンセッション参加者向け資料です
+
+JJUG CCC 2024 Fall  
+https://ccc2024fall.java-users.jp
+
+# 事前準備
+カンファレンス当日は参加者向けにwifiの用意がないため、事前準備をお願いします
+- 本リポジトリをダウンロードし、オフラインで参照できる状態にしておく
+- 当日使用するPCにJava 23をインストールする
+
+## Java 23のインストール方法
+準備中
+
