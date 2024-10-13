@@ -99,7 +99,7 @@
 * 実行
     ```
     $ cd part1/
-    java Console.java
+    $ java Console.java
     ```
 
 * 実行結果
