@@ -26,11 +26,12 @@ jshell> $◯
 ```
 
 ## var
-varを使って文字列を出力する
+文字列を出力する
+varを使った書き方に書き換えてみよう！
 
-```
-jshell> var hello = "Hello World!"
-jshell> System.out.println(hello)
+```java
+String hello = "Hello World!";
+System.out.println(hello);
 ```
 
 初期化時に値の宣言をしないとエラーになることを確認する
