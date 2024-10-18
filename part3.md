@@ -101,11 +101,35 @@ $8 ==> address: String
 ```
 
 # Switch
-## 以下のパターンを書いてみよう
+## Java14〜登場した新しいSwitch式
 ①  “：” の代わりに使える “->”が登場。 自動的にbreak相当の動作をする。
 ②  複数の定数をカンマで区切って指定できる
 ③  複数行からなるブロックから値を返すyieldが追加になった
-## ①と②と③はまとめて書いてみよう
+## 書いてみよう
+### これまで
+```java
+String emotion;
+switch (day) {
+    case MONDAY:
+    case TUESDAY:
+    case WEDNESDAY:
+    case THURSDAY:
+        emotion = "( ́Д`)";
+        break;
+    case FRIDAY:
+        emotion = "ヽ(・∀・)ノ";
+        break;
+    case SATURDAY:
+    case SUNDAY:
+        emotion = "ヽ(* ́∀`)ノ";
+        break;
+    default:
+        emotion = "(-_-)";
+        break;
+}
+```
+
+### これから
 ```java
 String getEmotion(String day) {
     return switch(day) {
@@ -136,4 +160,34 @@ $3 ==> 未知の曜日です: EVERYDAY
 $4 ==> (-_-)
 ```
 
-もっと追加した方がいいと思う。
+## Java16〜登場した新しいパターンマッチング
+### 書いてみよう
+```java
+// when句を使ったガード条件の書き方
+Object x = "4";
+String designation = switch (x) {
+    // case Integer i when i > 4 && i < 12 -> "child";
+    case Integer i when i < 12 -> "child";
+    case Integer i when i < 18 -> "teenager";
+    case Integer i when i < 25 -> "young adult";
+    case Integer i when i < 65 -> "adult";
+    case Integer i when i >= 65 -> "senior";
+    default -> "Not an Integer";
+};
+System.out.printf("Designation is %s%n", designation);
+```
+```java
+// (additional)sealedクラスとパターンマッチングの例
+sealed interface Shape permits Circle, Rectangle {}
+record Circle(double radius) implements Shape {}
+record Rectangle(double width, double height) implements Shape {}
+
+Shape shape = new Circle(5.0);
+
+double area = switch (shape) {
+    case Circle c -> Math.PI * c.radius() * c.radius();
+    case Rectangle r -> r.width() * r.height();
+};
+
+System.out.println("Area: " + area);
+```
