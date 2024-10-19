@@ -7,7 +7,7 @@ https://ccc2024fall.java-users.jp
 ## 目次
 
 - [Part 1：Launch Multi-File Source-Code Programs](https://github.com/java-women/jjug-ccc-2024-fall-hands-on-for-participants/blob/main/part1.md)
-- [Part 2：var & Text Blocks](https://github.com/java-women/jjug-ccc-2024-fall-hands-on-for-participants/blob/main/part2.md)
+- [Part 2：JShell, var & Text Blocks](https://github.com/java-women/jjug-ccc-2024-fall-hands-on-for-participants/blob/main/part2.md)
 - [Part 3：Records & Switch](https://github.com/java-women/jjug-ccc-2024-fall-hands-on-for-participants/blob/main/part3.md)
 
 # 事前準備
