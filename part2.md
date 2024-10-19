@@ -1,9 +1,9 @@
 # ハンズオン Part2
 ## JShell
-起動
+Preview Featuresで起動
 
 ```shell
-$ jshell
+$ jshell --enable-preview
 ```
 
 終了
@@ -18,7 +18,7 @@ JShellでHello Worldを出力する
 jshell> System.out.println("Hello World!")
 ```
 
-"Hello Javajo!"の入力後に「$◯」が表示されるのでそれを入力してみよう！
+(additional) "Hello Javajo!"の入力後に「$◯」が表示されるのでそれを入力してみよう！
 
 ```
 jshell> "Hello Javajo!"
@@ -34,13 +34,13 @@ String hello = "Hello World!";
 System.out.println(hello);
 ```
 
-初期化時に値の宣言をしないとエラーになることを確認する
+(additional) 初期化時に値の宣言をしないとエラーになることを確認する
 
 ```
 jshell> var obj1
 ```
 
-nullで初期化するとエラーになることを確認する
+(additional) nullで初期化するとエラーになることを確認する
 
 ```
 jshell> var obj2 = null
