@@ -32,9 +32,10 @@ OpenJDK 64-Bit Server VM (build 23+37-2369, mixed mode, sharing)
 
 ### パッケージインストール Windows
 
-- [JDK Development Kit 23 downloads](https://www.oracle.com/java/technologies/downloads/#jdk24-windows)ページを開く
+- [JDK Development Kit 23 downloads](https://www.oracle.com/java/technologies/downloads/#jdk23-windows)ページを開く
 - `x64 Installer`（.exeファイル）をダウンロードする
-- TODO ※実際やてみてから書きます
+- ダウンロードしたファイルから `jdk-23_windows-x64_bin.exe` を起動する
+- インストーラーの指示に従ってインストールを済ませる
 
 ### パッケージインストール Mac
 
