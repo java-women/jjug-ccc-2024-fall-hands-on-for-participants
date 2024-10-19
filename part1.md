@@ -105,5 +105,5 @@
 * 実行結果
     ```
     Name: (対話形式で聞かれるので何か入力する)
-    Please to meet you, (入力した内容が出る)
+    Pleased to meet you, (入力した内容が出る)
     ```
