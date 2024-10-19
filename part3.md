@@ -57,30 +57,30 @@ public record Person(String name, int age, String address) {}
 ```
 ### インスタンスの自動生成
 ```java
-var marika = new Person("marika",34,"Tokyo");
+var shiotsuki = new Person("Shiotsuki",34,"Tokyo");
 ```
 ### フィールドへのsetter禁止
 ```java
-marika.setName("Shiotsuki");
+shiotsuki.setName("marika");
 // error
 |  エラー:
 |  シンボルを見つけられません
 |    シンボル:   メソッド setName(java.lang.String)
-|    場所: タイプPersonの変数 marika
-|  marika.setName("Shiotsuki");
-|  ^------------^
+|    場所: タイプPersonの変数 shiotsuki
+|  shiotsuki.setName("marika");
+|  ^---------------^
 ```
 ### フィールドのgetter生成
 ```java
-marika.age();
+shiotsuki.age();
 // result
 $3 ==> 34
 ```
 ### toString()メソッドの自動実装
 ```java
-System.out.println(marika); 
+System.out.println(shiotsuki); 
 // result
-$4 ==> Person[name=marika, age=34, address=Tokyo]
+$4 ==> Person[name=Shiotsuki, age=34, address=Tokyo]
 ```
 ### (additional) レコード型かの確認
 ```java
@@ -102,9 +102,9 @@ $8 ==> address: String
 
 # Switch
 ## Java14〜登場した新しいSwitch式
-①  “：” の代わりに使える “->”が登場。 自動的にbreak相当の動作をする。
-②  複数の定数をカンマで区切って指定できる
-③  複数行からなるブロックから値を返すyieldが追加になった
+①  “：” の代わりに使える “->”が登場。 自動的にbreak相当の動作をする。  
+②  複数の定数をカンマで区切って指定できる  
+③  複数行からなるブロックから値を返すyieldが追加になった  
 ## 書いてみよう
 ### これまで
 ```java
@@ -131,11 +131,11 @@ switch (day) {
 
 ### これから
 ```java
-String getEmotion(String day) {
+String getEmotion2(String day) {
     return switch(day) {
-    case MONDAY, TUESDAY, WEDNESDAY, THURSDAY -> "( ́Д`)";
-    case FRIDAY                               -> "ヽ(・∀・)ノ";
-    case SATURDAY, SUNDAY                     -> "ヽ(* ́∀`)ノ";
+    case "MONDAY", "TUESDAY", "WEDNESDAY", "THURSDAY" -> "( ́Д`)";
+    case "FRIDAY"                                 -> "ヽ(・∀・)ノ";
+    case "SATURDAY", "SUNDAY"                     -> "ヽ(* ́∀`)ノ";
     default -> {
         System.out.println("未知の曜日です: " + day);
         yield "(-_-)";
@@ -163,7 +163,7 @@ $4 ==> (-_-)
 ## Java16〜登場した新しいパターンマッチング
 ### 書いてみよう
 ```java
-// when句を使ったガード条件の書き方
+// (addintional)when句を使ったガード条件の書き方:preview機能
 Object x = "4";
 String designation = switch (x) {
     // case Integer i when i > 4 && i < 12 -> "child";
