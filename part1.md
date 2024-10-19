@@ -19,11 +19,13 @@
     }
    ```
 
-* 実行
+* 実行(実行前には、当資料のあるフォルダに移動しておいてください。)
     ```
     $ cd part1/JEP330
     $ java Prog.java
     ```
+
+    > [NOTE] これまでのJavaでは、javacコマンドでコンパイル後、実行時はjava ${クラス名}でしたが、　新しくなってからはjava ${クラス名}.java だけでコンパイルと実行ができるようになります。
 
 * 実行結果
     ```
@@ -55,6 +57,7 @@
 
 * 実行
     ```
+    $ cd ..
     $ cd part1/JEP458
     $ java Prog.java
     ```
@@ -77,8 +80,11 @@
 
 * 実行
     ```
-    $ cd part1/
+    $ cd ..
+    ## java 23以上をインストールしている場合
     $ java HelloWorld.java 
+    ## java 23-ea 等、リリース前のバージョンを利用している場合
+    $ java --enable-preview HelloWorld.java
     ```
 
 * 実行結果
@@ -98,8 +104,10 @@
 
 * 実行
     ```
-    $ cd part1/
+    ## java 23以上をインストールしている場合
     $ java Console.java
+    ## java 23-ea 等、リリース前のバージョンを利用している場合
+    $ java --enable-preview Console.java
     ```
 
 * 実行結果
