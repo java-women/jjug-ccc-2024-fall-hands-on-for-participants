@@ -131,7 +131,7 @@ switch (day) {
 
 ### これから
 ```java
-String getEmotion2(String day) {
+String getEmotion(String day) {
     return switch(day) {
     case "MONDAY", "TUESDAY", "WEDNESDAY", "THURSDAY" -> "( ́Д`)";
     case "FRIDAY"                                 -> "ヽ(・∀・)ノ";
@@ -164,7 +164,7 @@ $4 ==> (-_-)
 ### 書いてみよう
 ```java
 // (addintional)when句を使ったガード条件の書き方:preview機能
-Object x = "4";
+Object x = 4;
 String designation = switch (x) {
     // case Integer i when i > 4 && i < 12 -> "child";
     case Integer i when i < 12 -> "child";
