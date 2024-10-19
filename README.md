@@ -4,6 +4,12 @@ JJUG CCC 2024 Fall のハンズオンセッション参加者向け資料です
 JJUG CCC 2024 Fall  
 https://ccc2024fall.java-users.jp
 
+## 目次
+
+- [Part 1：Launch Multi-File Source-Code Programs](https://github.com/java-women/jjug-ccc-2024-fall-hands-on-for-participants/blob/main/part1.md)
+- [Part 2：JShell, var & Text Blocks](https://github.com/java-women/jjug-ccc-2024-fall-hands-on-for-participants/blob/main/part2.md)
+- [Part 3：Records & Switch](https://github.com/java-women/jjug-ccc-2024-fall-hands-on-for-participants/blob/main/part3.md)
+
 # 事前準備
 カンファレンス当日は参加者向けにwifiの用意がないため、事前準備をお願いします
 - 本リポジトリをダウンロードし、オフラインで参照できる状態にしておく
