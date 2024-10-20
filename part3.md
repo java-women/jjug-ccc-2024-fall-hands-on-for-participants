@@ -1,7 +1,7 @@
 # Records
 
 ## 名前と年齢と住所を持った人を表すオブジェクトを書いてみよう！
-### これまで
+### (見るだけ)これまで
 ```java
 public class Person {
     private final String name;
@@ -82,6 +82,9 @@ System.out.println(shiotsuki);
 // result
 $4 ==> Person[name=Shiotsuki, age=34, address=Tokyo]
 ```
+<details>
+<summary>余裕がある人はこちらのサンプルもやってみてください！</summary>
+
 ### (additional) レコード型かの確認
 ```java
 System.out.println(Person.class.isRecord()); 
@@ -99,6 +102,8 @@ $6 ==> name: String
 $7 ==> age: int
 $8 ==> address: String
 ```
+</details>
+
 
 # Switch
 ## Java14〜登場した新しいSwitch式
@@ -106,7 +111,7 @@ $8 ==> address: String
 ②  複数の定数をカンマで区切って指定できる  
 ③  複数行からなるブロックから値を返すyieldが追加になった  
 ## 書いてみよう
-### これまで
+### (見るだけ)これまで
 ```java
 String emotion;
 switch (day) {
@@ -131,7 +136,7 @@ switch (day) {
 
 ### これから
 ```java
-String getEmotion2(String day) {
+String getEmotion(String day) {
     return switch(day) {
     case "MONDAY", "TUESDAY", "WEDNESDAY", "THURSDAY" -> "( ́Д`)";
     case "FRIDAY"                                 -> "ヽ(・∀・)ノ";
@@ -160,24 +165,28 @@ $3 ==> 未知の曜日です: EVERYDAY
 $4 ==> (-_-)
 ```
 
+<details>
+<summary>余裕がある人はこちらのサンプルもやってみてください！</summary>
+
 ## Java16〜登場した新しいパターンマッチング
-### 書いてみよう
+### (additional)書いてみよう
 ```java
-// (addintional)when句を使ったガード条件の書き方:preview機能
-Object x = "4";
-String designation = switch (x) {
-    // case Integer i when i > 4 && i < 12 -> "child";
-    case Integer i when i < 12 -> "child";
-    case Integer i when i < 18 -> "teenager";
-    case Integer i when i < 25 -> "young adult";
-    case Integer i when i < 65 -> "adult";
-    case Integer i when i >= 65 -> "senior";
-    default -> "Not an Integer";
+// when句を使ったガード条件の書き方:preview機能
+Object obj = 42;
+
+String result = switch (obj) {
+    case Integer i when i > 50 -> "50より大きい整数: " + i;
+    case Integer i -> "50以下の整数: " + i;
+    case String s when s.length() > 5 -> "長い文字列: " + s;
+    case String s -> "短い文字列: " + s;
+    default -> "不明な型";
 };
-System.out.printf("Designation is %s%n", designation);
+System.out.println(result);
+// result
+$5 ==> 50以下の整数: 42
 ```
 ```java
-// (additional)sealedクラスとパターンマッチングの例
+// sealedクラスとパターンマッチングの例
 sealed interface Shape permits Circle, Rectangle {}
 record Circle(double radius) implements Shape {}
 record Rectangle(double width, double height) implements Shape {}
@@ -190,4 +199,8 @@ double area = switch (shape) {
 };
 
 System.out.println("Area: " + area);
+// result
+$6 ==> Area: 78.53981633974483
 ```
+
+</details>
