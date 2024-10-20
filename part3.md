@@ -82,6 +82,9 @@ System.out.println(shiotsuki);
 // result
 $4 ==> Person[name=Shiotsuki, age=34, address=Tokyo]
 ```
+<details>
+<summary>余裕がある人はこちらのサンプルもやってみてください！</summary>
+
 ### (additional) レコード型かの確認
 ```java
 System.out.println(Person.class.isRecord()); 
@@ -99,6 +102,8 @@ $6 ==> name: String
 $7 ==> age: int
 $8 ==> address: String
 ```
+</details>
+
 
 # Switch
 ## Java14〜登場した新しいSwitch式
@@ -160,10 +165,13 @@ $3 ==> 未知の曜日です: EVERYDAY
 $4 ==> (-_-)
 ```
 
+<details>
+<summary>余裕がある人はこちらのサンプルもやってみてください！</summary>
+
 ## Java16〜登場した新しいパターンマッチング
 ### (additional)書いてみよう
 ```java
-// (addintional)when句を使ったガード条件の書き方:preview機能
+// when句を使ったガード条件の書き方:preview機能
 Object obj = 42;
 
 String result = switch (obj) {
@@ -178,7 +186,7 @@ System.out.println(result);
 $5 ==> 50以下の整数: 42
 ```
 ```java
-// (additional)sealedクラスとパターンマッチングの例
+// sealedクラスとパターンマッチングの例
 sealed interface Shape permits Circle, Rectangle {}
 record Circle(double radius) implements Shape {}
 record Rectangle(double width, double height) implements Shape {}
@@ -194,3 +202,5 @@ System.out.println("Area: " + area);
 // result
 $6 ==> Area: 78.53981633974483
 ```
+
+</details>
